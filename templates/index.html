@@ -4,8 +4,17 @@
 
 <h4>Masinu sarasas</h4>
 <form action="" method="get">
-  <p><input type="text" name="paieskoslaukelis"></p>
-  <p><input type="submit" value="filtruoti"></p>
+  <p>
+    <input type="text" name="paieskoslaukelis" placeholder="Ieškoti...">
+    <select name="filter_by">
+      <option value="make">Gamintojas</option>
+      <option value="model">Modelis</option>
+      <option value="color">Spalva</option>
+      <option value="year">Metai</option>
+      <option value="price">Kaina</option>
+    </select>
+  </p>
+  <p><input type="submit" value="Filtruoti"></p>
 </form>
 
 <p><a href="/masinos/naujas">Ivesti nauja masina</a></p>

@@ -32,10 +32,24 @@ class Cars(db.Model):
 @app.route('/')
 def home():
     search_text = request.args.get('paieskoslaukelis')
+    filter_by = request.args.get('filter_by')
+
     if search_text:
-        all_rows = Cars.query.filter(Cars.make.ilike(search_text + '%')).all()
+        if filter_by == 'make':
+            all_rows = Cars.query.filter(Cars.make.ilike(search_text + '%')).all()
+        elif filter_by == 'model':
+            all_rows = Cars.query.filter(Cars.model.ilike(search_text + '%')).all()
+        elif filter_by == 'color':
+            all_rows = Cars.query.filter(Cars.color.ilike(search_text + '%')).all()
+        elif filter_by == 'year':
+            all_rows = Cars.query.filter(Cars.year.ilike(search_text + '%')).all()
+        elif filter_by == 'price':
+            all_rows = Cars.query.filter(Cars.price.ilike(search_text + '%')).all()
+        else:
+            all_rows = Cars.query.all()
     else:
         all_rows = Cars.query.all()
+
     return render_template('index.html', all_rows=all_rows)
 
 @app.route('/masinos/<int:cars_id>', methods=['POST'])

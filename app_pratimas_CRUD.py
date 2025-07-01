@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 #app configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/verso/PycharmProjects/PythonProject/Difsu4_kursas/P19_Flask_05_app_w_db/cars_1.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cars_1.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 #db object

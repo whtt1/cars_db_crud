@@ -37,7 +37,7 @@
                 <form action="/masinos/redaguoti/{{ row.id }}">
                     <input type="submit" value="Redaguoti">
                 </form>
-                <form action="/masinos/trinti/{{ row.id }}" method="post">
+                <form action="/masinos/trinti/{{ row.id }}" method="post" onsubmit="return confirm('Ar Jus tikrai norite istrinti sia masina?');">
                     <input type="submit" value="Istrinti"></form></p></td>
             </tr>
             {% endfor %}

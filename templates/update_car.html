@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Atnaujinkite masinos duomenis</h4>
+<form action="" method="post">
+  <p>Make:</p>
+  <p><input type="text" name="makelaukas" value = "{{ row.make }}" id=""></p>
+  <p>Model:</p>
+  <p><input type="text" name="modellaukas" value = "{{ row.model }}" id=""></p>
+  <p>Color:</p>
+  <p><input type="text" name="colorlaukas" value = "{{ row.color }}" id=""></p>
+  <p>Year:</p>
+  <p><input type="text" name="yearlaukas" value = "{{ row.year }}" id=""></p>
+  <p>Price:</p>
+  <p><input type="text" name="pricelaukas" value = "{{ row.price }}" id=""></p>
+  <p><input type="submit" value="Atnaujinti"></p>
+</form>
+
+<p><a href="/">Grizti i pradzia</a></p>
+
+{% endblock %}

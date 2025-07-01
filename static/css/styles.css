@@ -1,0 +1,32 @@
+table {
+    border-collapse: collapse;
+}
+td, th, table{
+    border: 2px solid black;
+}
+td, th{
+    padding: 10px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin: 5px 0;
+}
+
+form p:last-child {
+    text-align: center;
+}
+
+tr form {
+    margin-top: 5px;
+}
